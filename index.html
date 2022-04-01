@@ -29,15 +29,14 @@
           <label class="form-label" for="username">City</label>
           <!-- user input for city -->
           <input name="userInput" id="userInput" type="text" autofocus="true" class="form-input" />
-          <button type="submit" class="btn btn-dark">Get User</button>
+          <button id="button" type="submit" class="btn btn-dark">Get city</button>
         </form>
       </div>
     </div>
 
     <!-- results and current day container  -->
-    <div class="col-12 col-md-8">
+    <div class="col-12 col-md-8 card">
       <h2 class="subtitle">Showing Results </h2>
-      <div id="weather-container" class="list-group"></div>
       <div id="city-name" class="city-name">city name here</div>
       <div id="current-weather">current data here</div>
       
@@ -55,6 +54,8 @@
     </div>
     
   </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/config.js"></script>
   <script src="./assets/js/script.js"></script>
 </body>
 
