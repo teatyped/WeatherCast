@@ -10,20 +10,32 @@ const day = date.getDate();
 const year = date.getFullYear();
 const fullYear = " " + "(" + month + "/" + day + "/" + year + ")";
 
+var history = [];
+
 document.getElementById("button").addEventListener("click", handleClick);
 
 function handleClick(event) {
   event.preventDefault();
 
-  console.log("in click fun");
 
   let city = document.getElementById("userInput").value.trim();
   console.log("user input " + city);
 
   if (city) {
+    fetchApi(city);
+    // history.push('city');
+    // localStorage.setItem("city", JSON.stringify(history));
+} else if (!city) {
+    alert("Please enter a city.");
+}
+
+}
+
+
+function fetchApi(city){
+
     let url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${api_key}`;
     console.log("user URL " + url);
-
     fetch(url)
       .then((data) => data.json())
       .then((data) => {
@@ -71,10 +83,9 @@ function handleClick(event) {
             }
           });
       });
-  } else if (!city) {
-    alert("Please enter a city.");
-  }
+
 }
+
 
 function displayCurrent(data) {
 
@@ -99,4 +110,3 @@ function displayCurrent(data) {
             <div class="card-text ${colorBlock}">UV Index: ${uvi}</div>
         </div>`;
 }
-
