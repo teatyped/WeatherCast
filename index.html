@@ -21,7 +21,7 @@
   </header>
 
 
-  <main class="flex-row justify-space-between">
+  <main class="flex-row justify-space-between container">
     <div class="col-12 col-md-4">
       <div class="card">
         <h3 class="card-header text-uppercase">Search By City</h3>
@@ -35,22 +35,21 @@
     </div>
 
     <!-- results and current day container  -->
-    <div class="col-12 col-md-8 card">
+    <div class="container card">
       <h2 class="subtitle">Showing Results </h2>
       <div id="city-name" class="city-name">city name here</div>
       <div id="current-weather">current data here</div>
       
     </div>
     <!-- 5 day cards  -->
-    <div id="5day-container">
-
-      <div class="card" id="day-card">
-        <div class="card-body">
-          <h5 class="card-title">card title</h5>
-          <p class="card-text">card info will go here</p>
-        </div>
+    <div id="forecast-container" class=".container-fluid">
+      <div class="row">
+        <div id="forecast-1" class="col-sm col-md-2 col-lg"></div>
+        <div id="forecast-2" class="col-sm col-md-2 col-lg"></div>
+        <div id="forecast-3" class="col-sm col-md-2 col-lg"></div>
+        <div id="forecast-4" class="col-sm col-md-2 col-lg"></div>
+        <div id="forecast-5" class="col-sm col-md-2 col-lg"></div> 
       </div>
-      
     </div>
     
   </main>
