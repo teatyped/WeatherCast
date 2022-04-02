@@ -76,7 +76,7 @@ function displayCurrent(data) {
     colorBlock = "bg-success";
   }
   currentContainer.innerHTML = `<div class="current-data card-body text-center">
-        <img src="https://openweathermap.org/img/w/${icon}.png">
+        <img src="https://openweathermap.org/img/wn/${icon}.png">
             <div class="card-text">Temp: ${temp}°F</div>
             <div class="card-text">Wind: ${wind_speed}mph</div>
             <div class="card-text">Humidity: ${humidity}%</div>
@@ -102,7 +102,7 @@ function displayForecast(data) {
     ).innerHTML = `<div class="card" id="day-card">
                               <div class = "card-body text-center">
                                   <h5 class = "card-title">${currentDate}</h4>
-                                  <div><img src="https://openweathermap.org/img/w/${weatherData.icon}.png"></div>
+                                  <div><img src="https://openweathermap.org/img/wn/${weatherData.icon}.png"></div>
                                   <div class = "card-text">Temp: ${weatherData.temp}°F</div>
                                   <div class = "card-text">Wind: ${weatherData.wind_speed}mph</div>
                                   <div class = "card-text">Humidity: ${weatherData.humidity}%</div>
@@ -132,5 +132,5 @@ function domLoad() {
     };
 
 
-    
+
     domLoad();
