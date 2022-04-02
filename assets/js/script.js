@@ -17,6 +17,7 @@ document.getElementById("button").addEventListener("click", handleClick);
 function handleClick(event) {
   event.preventDefault();
 
+
   let city = document.getElementById("userInput").value.trim();
   console.log("user input " + city);
 
@@ -33,6 +34,7 @@ function handleClick(event) {
   }
 
   localStorage.setItem("City", JSON.stringify(searchHistory));
+  domLoad();
 }
 
 function fetchApi(city) {
@@ -129,4 +131,6 @@ function domLoad() {
         }
     };
 
+
+    
     domLoad();
