@@ -34,7 +34,7 @@ function handleClick(event) {
 
 function fetchApi(city){
 
-    let url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${api_key}`;
+    let url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${api_key}`;
     console.log("user URL " + url);
     fetch(url)
       .then((data) => data.json())
