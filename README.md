@@ -15,3 +15,13 @@
 - Bootstrap
 - Java Script
 - OpenWeatherMap.org API
+
+
+## Web application link 
+https://teatyped.github.io/WeatherCast/
+
+
+## screenshot
+![screenshot](weathercast.png)
+
+
