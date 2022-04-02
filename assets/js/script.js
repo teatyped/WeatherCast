@@ -116,4 +116,3 @@ function displayForecast(data){
       }
 }
 
-fetchApi("orlando");
