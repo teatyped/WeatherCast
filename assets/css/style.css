@@ -64,8 +64,23 @@ h5{
   
   #day-card{
     width: 25vw;
+   
   }
   
   li{
     list-style: none;
+  }
+
+
+  @media only screen and (max-width: 600px){
+    #forecast-container{
+      display: inline-block;
+    }
+
+    .row{
+      display: block;
+    }
+    #day-card{
+      width: 100%;
+    }
   }

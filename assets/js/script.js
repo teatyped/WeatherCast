@@ -72,7 +72,7 @@ function fetchApi(city){
                 document.getElementById("forecast-" + i).innerHTML = 
             
                                 `<div class="card" id="day-card">
-                                    <div class = "card-body">
+                                    <div class = "card-body text-center">
                                         <h5 class = "card-title">${currentDate}</h4>
                                         <div><img src="http://openweathermap.org/img/w/${weatherData.icon}.png"></div>
                                         <div class = "card-text">Temp: ${weatherData.temp}°F</div>
@@ -102,7 +102,7 @@ function displayCurrent(data) {
   }
   currentContainer.innerHTML = 
   
-    `<div class="current-data card-body">
+    `<div class="current-data card-body text-center">
         <img src="http://openweathermap.org/img/w/${icon}.png">
             <div class="card-text">Temp: ${temp}°F</div>
             <div class="card-text">Wind: ${wind_speed}mph</div>
@@ -110,3 +110,5 @@ function displayCurrent(data) {
             <div class="card-text ${colorBlock}">UV Index: ${uvi}</div>
         </div>`;
 }
+
+fetchApi("orlando");
