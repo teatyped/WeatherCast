@@ -100,7 +100,7 @@ function displayForecast(data) {
     ).innerHTML = `<div class="card" id="day-card">
                               <div class = "card-body text-center">
                                   <h5 class = "card-title">${currentDate}</h4>
-                                  <div><img src="http://openweathermap.org/img/w/${weatherData.icon}.png"></div>
+                                  <div><img src="https://openweathermap.org/img/w/${weatherData.icon}.png"></div>
                                   <div class = "card-text">Temp: ${weatherData.temp}°F</div>
                                   <div class = "card-text">Wind: ${weatherData.wind_speed}mph</div>
                                   <div class = "card-text">Humidity: ${weatherData.humidity}%</div>
