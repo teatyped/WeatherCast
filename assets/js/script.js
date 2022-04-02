@@ -52,35 +52,10 @@ function fetchApi(city){
           .then((response) => response.json())
           .then((data) => {
             console.log(data);
-            // pass data and display info to document
+            // pass data to current and forecast and display info on document
             displayCurrent(data);
-
-            for (var i = 1; i <= 5; i++) {
-              var weatherData = {
-                date: data.daily[i].dt,
-                temp: data.daily[i].temp.day,
-                wind_speed: data.daily[i].wind_speed,
-                humidity: data.daily[i].humidity,
-                icon: data.current.weather[0].icon
-              };
-
-              var currentDate = moment
-                .unix(weatherData.date)
-                .format("MM/DD/YYYY");
-
+            displayForecast(data);
             
-                document.getElementById("forecast-" + i).innerHTML = 
-            
-                                `<div class="card" id="day-card">
-                                    <div class = "card-body text-center">
-                                        <h5 class = "card-title">${currentDate}</h4>
-                                        <div><img src="http://openweathermap.org/img/w/${weatherData.icon}.png"></div>
-                                        <div class = "card-text">Temp: ${weatherData.temp}°F</div>
-                                        <div class = "card-text">Wind: ${weatherData.wind_speed}mph</div>
-                                        <div class = "card-text">Humidity: ${weatherData.humidity}%</div>
-                                    </div>    
-                                </div>`;
-            }
           });
       });
 
@@ -109,6 +84,36 @@ function displayCurrent(data) {
             <div class="card-text">Humidity: ${humidity}%</div>
             <div class="card-text ${colorBlock}">UV Index: ${uvi}</div>
         </div>`;
+}
+
+function displayForecast(data){
+
+    for (var i = 1; i <= 5; i++) {
+        var weatherData = {
+          date: data.daily[i].dt,
+          temp: data.daily[i].temp.day,
+          wind_speed: data.daily[i].wind_speed,
+          humidity: data.daily[i].humidity,
+          icon: data.current.weather[0].icon
+        };
+
+        var currentDate = moment
+          .unix(weatherData.date)
+          .format("MM/DD/YYYY");
+
+      
+          document.getElementById("forecast-" + i).innerHTML = 
+      
+                          `<div class="card" id="day-card">
+                              <div class = "card-body text-center">
+                                  <h5 class = "card-title">${currentDate}</h4>
+                                  <div><img src="http://openweathermap.org/img/w/${weatherData.icon}.png"></div>
+                                  <div class = "card-text">Temp: ${weatherData.temp}°F</div>
+                                  <div class = "card-text">Wind: ${weatherData.wind_speed}mph</div>
+                                  <div class = "card-text">Humidity: ${weatherData.humidity}%</div>
+                              </div>    
+                          </div>`;
+      }
 }
 
 fetchApi("orlando");
