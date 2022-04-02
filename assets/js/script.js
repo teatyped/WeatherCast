@@ -78,7 +78,7 @@ function displayCurrent(data) {
   currentContainer.innerHTML = 
   
     `<div class="current-data card-body text-center">
-        <img src="http://openweathermap.org/img/w/${icon}.png">
+        <img src="https://openweathermap.org/img/w/${icon}.png">
             <div class="card-text">Temp: ${temp}°F</div>
             <div class="card-text">Wind: ${wind_speed}mph</div>
             <div class="card-text">Humidity: ${humidity}%</div>
