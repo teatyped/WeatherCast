@@ -92,7 +92,7 @@ function displayForecast(data) {
       temp: data.daily[i].temp.day,
       wind_speed: data.daily[i].wind_speed,
       humidity: data.daily[i].humidity,
-      icon: data.current.weather[0].icon,
+      icon: data.daily[i].weather[0].icon,
     };
 
     var currentDate = moment.unix(weatherData.date).format("MM/DD/YYYY");
